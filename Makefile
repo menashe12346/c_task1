@@ -4,13 +4,13 @@ FLAG = -Wall -g
 all: libclassloops.a libclassrec.a libclassloops.so libclassrec.so mains maindloop maindrec
 
 basicClassification.o: basicClassification.c NumClass.h
-	$(cc) $(FLAG) -c $<
+	$(cc) $(FLAG) -fPIC -c $<
 
 advancedClassificationLoop.o: advancedClassificationLoop.c NumClass.h
-	$(cc) $(FLAG) -c $<
+	$(cc) $(FLAG) -fPIC -c $<
 
 advancedClassificationRecursion.o: advancedClassificationRecursion.c NumClass.h
-	$(cc) $(FLAG) -c $<
+	$(cc) $(FLAG) -fPIC -c $<
 
 # STATIC LIB
 libclassloops.a: basicClassification.o advancedClassificationLoop.o
